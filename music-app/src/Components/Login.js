@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
+import Header from "./Header"
 const Login = () => {
 
     const email = useRef(null);
@@ -13,6 +14,7 @@ const Login = () => {
     
     return (
         <div className="">
+            <Header/>
             <div className="bg-zinc-950 w-5/12 fixed shadow-2xl rounded-xl left-[29.5%] my-0 mx-auto">
             <form className=" px-20 py-24 text-white" onSubmit={(e)=>e.preventDefault()}>
             <img className="w-16 m-auto " src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_White.png"/>

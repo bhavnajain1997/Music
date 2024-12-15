@@ -1,8 +1,11 @@
 import React from 'react'
-
+import Header from './Header'
 const Music = () => {
   return (
-    <div>Music</div>
+    <div>
+      <Header/>
+      Music
+      </div>
   )
 }
 

@@ -1,4 +1,26 @@
+import { useDispatch } from "react-redux"
+import { useSelector } from "react-redux";
+import { removeLoginPage, toogleLoginPageView } from "../utilis/loginSlice";
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const user = useSelector(store => store.user);
+    const showLoginpage = useSelector(store => store.login?.showLoginpage)
+    const handleLoginPageClick = () => {
+        dispatch(toogleLoginPageView())
+        navigate("/login")  
+        if (!showLoginpage){
+            navigate("/")
+         }
+           
+         
+         
+
+    }
+    
     return(
         <div className="header flex justify-between px-14 ">
              <div className="logo">
@@ -13,7 +35,7 @@ const Header = () => {
              </div>
              <div>
                 <div>
-                    <button className="btn border border-white py-2 px-10 font-bold text-white">Login</button>
+                    <button className="btn border border-white py-2 px-10 font-bold text-white" onClick={handleLoginPageClick}>{showLoginpage ? "Home Page" : "Login"}</button>
 
                 </div>
              </div>
