@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux"
 import { useSelector } from "react-redux";
 import { removeLoginPage, toogleLoginPageView } from "../utilis/loginSlice";
 import { useNavigate } from "react-router-dom";
+import { LOGO_IMG } from "../utilis/constant";
 
 const Header = () => {
 
@@ -12,19 +13,15 @@ const Header = () => {
     const handleLoginPageClick = () => {
         dispatch(toogleLoginPageView())
         navigate("/login")  
-        if (!showLoginpage){
+        if (showLoginpage){
             navigate("/")
          }
-           
-         
-         
-
     }
     
     return(
         <div className="header flex justify-between px-14 ">
              <div className="logo">
-                <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_White.png" className="w-20 max-h-28 p-4" alt="logo"/>
+                <img src={LOGO_IMG} className="w-20 max-h-28 p-4" alt="logo"/>
              </div>
              <div className="Search">
                 <form className="relative px-3">

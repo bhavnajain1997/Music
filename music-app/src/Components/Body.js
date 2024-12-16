@@ -1,3 +1,4 @@
+import { BG_IMG } from "../utilis/constant";
 import Header from "./Header";
 import Login from "./Login";
 import Music from "./Music"
@@ -17,8 +18,8 @@ const Body = () => {
   ])
 
     return(
-        <div className="bg-gradient-to-br from-black  ">
-                        <img className="fixed -z-10 w-screen" src="https://cdn.vox-cdn.com/thumbor/SvB3nl3s-M9kxP6Z62zLVVul8GI=/0x0:2040x1360/2040x1360/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/25378910/STK088_SPOTIFY_CVIRGINIA_D.jpg"/>
+        <div className="bg-gradient-to-br from-black aspect-video">
+                        <img className="fixed -z-10 w-screen" src={BG_IMG}/>
 
             <div className=" w-screen h-screen  ">
              <RouterProvider router = {appRouter}/>

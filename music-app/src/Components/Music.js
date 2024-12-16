@@ -4,7 +4,7 @@ const Music = () => {
   return (
     <div>
       <Header/>
-      Music
+      
       </div>
   )
 }
